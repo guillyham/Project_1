@@ -2,6 +2,8 @@
 /*
  * Constantes de parâmetros para configuração da conexão
  */
+session_start();
+
 define('SGBD', 'mysql');
 define('HOST', 'localhost');
 define('DBNAME', 'trabson');
@@ -10,6 +12,8 @@ define('USER', 'root');
 define('PASSWORD', 'usbw');
 define('PORT', '3307');
 define('SERVER', 'linux');
+
+global $pdo;
 
 class conexao {
     
