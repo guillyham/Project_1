@@ -17,8 +17,7 @@ if(isset($_POST['email']) && !empty($_POST['email']) && isset($_POST['senha']) &
     }
 }
 else{
-     print_r $email;
-     /*header("Location: login.php");*/
+     header("Location: login.php");
 }
 
 ?>

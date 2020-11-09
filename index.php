@@ -133,7 +133,7 @@ $termo = (isset($_GET['termo'])) ? $_GET['termo'] : '';
           <li class="nav-item">
             <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
               <i class="fa fa-fw fa-sign-out"></i>
-              Logout</a>
+              Sair</a>
           </li>
         </ul>
       </div>  
@@ -169,17 +169,14 @@ $termo = (isset($_GET['termo'])) ? $_GET['termo'] : '';
     <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+            <h5 class="modal-title" id="exampleModalLabel">Quer deslogar</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <div class="modal-body">
-            Select "Logout" below if you are ready to end your current session.
-          </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-            <a class="btn btn-primary" href="login.html">Logout</a>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            <a class="btn btn-primary" href="login/login.php">Sair</a>
           </div>
         </div>
       </div>
