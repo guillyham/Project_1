@@ -31,7 +31,7 @@
           Login
         </div>
         <div class="card-body">
-          <form method="POST">
+          <form method="post" action='validate_login.php'>
             <div class="form-group">
               <label >Email</label>
               <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" name="email">
@@ -48,7 +48,7 @@
                 </label>
               </div>
             </div>
-            <a class="btn btn-primary btn-block" href="validate_login.php">Logar</a>
+            <input type="submit" value="Logar" class="btn btn-primary btn-block">
           </form>
           <div class="text-center">
             <a class="d-block small mt-3" href="register.php">Criar usuario</a>

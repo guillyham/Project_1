@@ -7,7 +7,7 @@ if(isset($_POST['email']) && !empty($_POST['email']) && isset($_POST['senha']) &
     $user = new Usr();
 
     $email = addslashes($_POST['email']);
-    $senha = addslashes($_POST['Senha']);
+    $senha = addslashes($_POST['senha']);
 
     if($user->Usr($email, $senha) == true && isset($_SESSION['id'])){
         header("Location: .//index.php");
@@ -17,7 +17,9 @@ if(isset($_POST['email']) && !empty($_POST['email']) && isset($_POST['senha']) &
     }
 }
 else{
-     header("Location: login.php");
+     /*header("Location: login.php");*/
+
+     print_r($_POST);
 }
 
 ?>
