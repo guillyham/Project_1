@@ -6,7 +6,7 @@ session_start();
 
 define('SGBD', 'mysql');
 define('HOST', 'localhost');
-define('DBNAME', 'trabson');
+define('DBNAME', 'project_1');
 define('CHARSET', 'utf8');
 define('USER', 'root');
 define('PASSWORD', 'usbw');

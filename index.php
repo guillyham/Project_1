@@ -1,7 +1,7 @@
 <?php
 
 require 'conexao.php';
-
+/*
 // Recebe o termo de pesquisa se existir
 $termo = (isset($_GET['termo'])) ? $_GET['termo'] : '';
 
@@ -16,7 +16,7 @@ $termo = (isset($_GET['termo'])) ? $_GET['termo'] : '';
   $stm = $conexao->prepare($sql);
   $stm->execute();
   $matricula = $stm->fetchAll(PDO::FETCH_OBJ);
-
+*/
 
 ?>
 
@@ -33,7 +33,7 @@ $termo = (isset($_GET['termo'])) ? $_GET['termo'] : '';
 
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>FCV Gestão Escolar</title>
+    <title>Project_1</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -53,7 +53,7 @@ $termo = (isset($_GET['termo'])) ? $_GET['termo'] : '';
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-      <a class="navbar-brand" href="index.php">FCV gestão escolar</a>
+      <a class="navbar-brand" href="index.php">Project_1</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -70,96 +70,43 @@ $termo = (isset($_GET['termo'])) ? $_GET['termo'] : '';
             <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseAluno" data-parent="#exampleAccordion">
               <i class="fa fa-fw fa-user"></i>
               <span class="nav-link-text">
-                Aluno</span>
+              PLACE HOLDER4</span>
             </a>
             <ul class="sidenav-second-level collapse" id="collapseAluno">
-              <li>
-                <a href="cadastroaluno.php">Cadastrar Aluno</a>
-              </li>
-              <li>
-                <a href="listaaluno.php">Lista de Alunos</a>
-              </li>
-               <li>
-                <a href="faltas_aluno.php">Lancar Notas e Faltas</a>
-              </li>
             </ul>
           </li>
           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Curso">
             <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseCurso" data-parent="#exampleAccordion">
               <i class="fa fa-fw fa-book"></i>
               <span class="nav-link-text">
-                Curso</span>
+              PLACE HOLDER3</span>
             </a>
-            <ul class="sidenav-second-level collapse" id="collapseCurso">
-              <li>
-                <a href="cadastrocurso.php">Cadastrar Curso</a>
-              </li>
-              <li>
-                <a href="listacurso.php">Lista de Cursos</a>
-              </li>             
+            <ul class="sidenav-second-level collapse" id="collapseCurso">         
             </ul>
           </li>
           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Turma">
             <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseTurma" data-parent="#exampleAccordion">
               <i class="fa fa-fw fa-group"></i>
               <span class="nav-link-text">
-                Turma</span>
+              PLACE HOLDER2</span>
             </a>
             <ul class="sidenav-second-level collapse" id="collapseTurma">
-              <li>
-                <a href="cadastroturma.php">Cadastrar Turma</a>
-              </li>
-              <li>
-                <a href="listarturma.php">Lista de Turmas</a>
-              </li>
             </ul>
           </li>
           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Cadastro de Matricula">
             <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseCadastro" data-parent="#exampleAccordion">
               <i class="fa fa-fw fa-user-plus"></i>
               <span class="nav-link-text">
-                Cadastro de Matricula</span>
+                PLACE HOLDER1</span>
             </a>
             <ul class="sidenav-second-level collapse" id="collapseCadastro">
-              <li>
-                <a href="cadastromatricula.php">Cadastrar Matricula</a>
-              </li>
-              <li>
-                <a href="listarmartricula.php">Listar matriculas</a>
-              </li>
             </ul>
           </li>
-
-
           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Relatórios">
             <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseRelatorio" data-parent="#exampleAccordion">
               <i class="fa fa-fw fa-file-pdf-o"></i>
               <span class="nav-link-text">
                 Relatórios</span>
-            </a>
-            <ul class="sidenav-second-level collapse" id="collapseRelatorio">
-              <li>
-                <a href="rel_alunos.php">Lista de Alunos </a>
-              </li>
-              <li>
-                <a href="rel_cursos.php">Listar de Cursos</a>
-              </li>
-              <li>
-                <a href="rel_aluturmas.php">Lista de Alunos e Turmas</a>
-              <li>
-                <a href="rel_alunonota.php">Listar de Alunos, Notas e Situação</a>
-              </li>
-              <li>
-                <a href="rel_alunofalta.php">Listar de Alunos, Faltas e Situação</a>
-              </li>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="FCV Drive">
-            <a class="nav-link" href="#">
-              <i class="fa fa-fw fa-link"></i>
-              <span class="nav-link-text">
-                FCV Drive</span>
             </a>
           </li>
         </ul>
@@ -191,72 +138,16 @@ $termo = (isset($_GET['termo'])) ? $_GET['termo'] : '';
         </ul>
       </div>  
     </nav>
-<?php if(!empty($matricula));?>
+<?php if(!empty($agenda));?>
     <div class="content-wrapper">
-
       <div class="container-fluid">
 
         <!-- Example Tables Card -->
         <div class="card mb-3">
           <div class="card-header">
             <i class="fa fa-table"></i>
-            Lista de Cursos
+            Agenda
           </div>
-          <div class="card-body">
-            <div class="table-responsive">
-              <table class="table table-bordered" width="100%" id="dataTable" cellspacing="0">
-                <thead>
-                  <tr>
-                    <th>Nome</th>
-                    <th>Curso</th>
-                    <th>Semestre</th>
-                    <th>turma</th>
-                    <th>Nota</th>
-                    <th>Faltas</th>
-                    <th>Situação</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                <?php foreach ($matricula as $matricula):?>
-                  <tr class="active">
-                    <td><?=$matricula->nome?></td>
-                    <td><?=$matricula->curso?></td>
-                    <td><?=$matricula->semestre?></td>
-                    <td><?=$matricula->turma?></td>
-                    <td><?=$matricula->total_nota?></td>
-                    <td><?=$matricula->total_falta?></td>
-                    <td>
-                    <?php 
-                    if ($matricula->total_nota >= 70 && $matricula->total_falta <= 20) {
-                      $situação = "Aprovado"; 
-                    }
-                    else {
-                      $situação = "Reprovado"; 
-                    }
-                    echo $situação;
-                    ?>
-                      
-                    </td>
-
-                     <?php endforeach;?>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-         
-      <!-- /.container-fluid -->
-
-    </div>
-          <div class="card-footer small text-muted">
-            Situação de Reprovação: Nota inferior a 70 ou Falta superior a 20.
-          </div>
-        </div>
-
-      </div>
-      <!-- /.container-fluid -->
-
     </div>
     <!-- /.content-wrapper -->
 
