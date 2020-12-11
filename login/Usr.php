@@ -1,23 +1,34 @@
 <?php
+require_once '../conexao.php';
 class Usr 
 {
     public function login($email, $senha){
-        global $pdo;
+    $pdo = getPDO();
+           
+        $sql = "SELECT * FROM usuarios WHERE Email = '$email' AND Senha = '$senha'";
+        $query = $pdo->query($sql);
+        $f = $query->fetchAll();
+        echo $sql;
 
-        $sql = " SELECT * FROM usuarios WHERE Email = :email AND Senha = :senha";
-        $sql = $pdo->prepare($sql);
-        $sql-> bindValues("email", $email);
-        $sql-> bindValues("senha", md5($senha));
-        $sql->execute();
+        $i = 0;
+        while(!empty($f[$i]))
+        {
+            $i++;   
+        }
 
-        if($sql-> rowCount()>0){
-            $dado = $sql -> fetch() > 0;
-            $_SESSION['idUsr'] = $dado['id'];
+        if(!empty($f)) {
+             $_SESSION['idUsr'] = $f['id'];
+             $x = $f['Senha'];
+            print_r($f);
             return true;
         }
         else{
             return false;
         }
+    
+    
+    
+    
     }
 }
 
